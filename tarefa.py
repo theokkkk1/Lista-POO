@@ -10,16 +10,16 @@ class Tarefa:
 
     def concluir(self):
         self.concluida = True
-        print(f"✔️ Tarefa concluída: {self.titulo}")
+        print(f" Tarefa concluída: {self.titulo}")
 
     def reabrir(self):
         self.concluida = False
-        print(f"🔙 Tarefa reaberta: {self.titulo}")
+        print(f" Tarefa reaberta: {self.titulo}")
 
     def exibir_detalhes(self, numero=None):
-        status = "✔️ Concluída" if self.concluida else "⏳ Pendente"
+        status = " Concluída" if self.concluida else "⏳ Pendente"
         prefixo = f"{numero}. " if numero is not None else ""
-        print(f"\n📌 {prefixo}{self.titulo} — {status}")
+        print(f"\n {prefixo}{self.titulo} — {status}")
         print(f"   Descrição: {self.descricao}")
         print(f"   Prazo: {self.prazo if self.prazo else '(não definido)'}")
 
@@ -49,7 +49,7 @@ class TarefaComSubtarefas(Tarefa):
     def concluir(self):
         pendentes = [st for st in self.subtarefas if not st.concluida]
         if pendentes:
-            print("⚠️ Não é possível concluir a tarefa principal. Existem subtarefas pendentes.")
+            print(" Não é possível concluir a tarefa principal. Existem subtarefas pendentes.")
             return
         self.concluida = True
         print(f"✔️ Tarefa principal concluída: {self.titulo}")
