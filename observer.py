@@ -13,4 +13,4 @@ class Usuario(Observador):
         self.nome = nome
 
     def atualizar(self, mensagem):
-        print(f"📩 Notificação para {self.nome}: {mensagem}")
+        print(f" Notificação para {self.nome}: {mensagem}")
