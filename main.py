@@ -5,7 +5,7 @@ from observer import Usuario
 
 
 def menu():
-    print("\n📋 MENU DE TAREFAS:")
+    print("\n MENU DE TAREFAS:")
     print("1. Adicionar tarefa")
     print("2. Listar tarefas")
     print("3. Concluir tarefa")
@@ -25,7 +25,7 @@ def main():
        
         if opcao == "1":
 
-            print("\n🟦 ADICIONAR TAREFA")
+            print("\n ADICIONAR TAREFA")
             print("Digite 0 a qualquer momento para voltar.\n")
 
             print("Tipos: 1) Simples  2) Repetitiva  3) Com Subtarefas")
@@ -35,7 +35,7 @@ def main():
                 continue
 
             if tipo not in ["1", "2", "3"]:
-                print("⚠️ Tipo inválido!")
+                print(" Tipo inválido!")
                 continue
 
             titulo = input("Título da tarefa: ")
@@ -70,7 +70,7 @@ def main():
                 try:
                     qtd = int(qtd)
                 except:
-                    print("⚠️ Número inválido!")
+                    print(" Número inválido!")
                     continue
 
                 for _ in range(qtd):
@@ -99,7 +99,7 @@ def main():
 
      
         elif opcao == "2":
-            print("\n🗂️ LISTA DE TAREFAS:")
+            print("\n LISTA DE TAREFAS:")
             if not ger.tarefas:
                 print("Nenhuma tarefa cadastrada.")
                 continue
@@ -114,10 +114,10 @@ def main():
 
       
         elif opcao == "3":
-            print("\n🟦 CONCLUIR TAREFA")
+            print("\n CONCLUIR TAREFA")
 
             if not ger.tarefas:
-                print("⚠️ Nenhuma tarefa cadastrada!")
+                print(" Nenhuma tarefa cadastrada!")
                 continue
 
             print("\nEscolha o número da tarefa para concluir:\n")
@@ -151,7 +151,7 @@ def main():
                     cmd.executar()
 
                 except:
-                    print("⚠️ Número inválido!")
+                    print(" Número inválido!")
                 continue
 
             
@@ -162,9 +162,9 @@ def main():
                     cmd = ConcluirTarefaCommand(ger, tarefa)
                     cmd.executar()
                 else:
-                    print("⚠️ Número inválido!")
+                    print(" Número inválido!")
             except:
-                print("⚠️ Entrada inválida!")
+                print(" Entrada inválida!")
 
 
         elif opcao == "4":
@@ -172,11 +172,11 @@ def main():
             cmd.executar()
 
         elif opcao == "5":
-            print("👋 Saindo do sistema...")
+            print(" Saindo do sistema...")
             break
 
         else:
-            print("⚠️ Opção inválida!")
+            print(" Opção inválida!")
 
 
 if __name__ == "__main__":
