@@ -54,7 +54,7 @@ class DesfazerCommand(Comando):
             comando = self.gerenciador.historico.pop()
             comando.desfazer()
         else:
-            print("⚠️ Nenhuma ação para desfazer.")
+            print(" Nenhuma ação para desfazer.")
 
     def desfazer(self):
         pass  
